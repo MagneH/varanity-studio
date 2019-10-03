@@ -11,16 +11,27 @@ const pageType1 = {
 
     // Now we proceed to list the fields of our document
     fields: [
-        // This document has only one field
         {
-            // The display name for this field
-            title: "Name",
+            title: "Title",
 
             // The identifier for this field used in the api's
-            name: "name",
+            name: "title",
 
             // The type of this field
             type: "string",
+        },
+        {
+            title: 'Slug',
+            name: 'slug',
+            type: 'slug',
+            options: {
+                source: 'title',
+                maxLength: 200, // will be ignored if slugify is set
+                slugify: input => input
+                    .toLowerCase()
+                    .replace(/\s+/g, '-')
+                    .slice(0, 200)
+            }
         }
     ]
 };
