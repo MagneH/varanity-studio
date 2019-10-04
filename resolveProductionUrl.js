@@ -12,7 +12,7 @@ export default function resolveProductionUrl(document) {
         // And return a template string reflecting the URL structure we want. In this case, we're doing a
         // simple conditional to return '&isDraft=true' as a param for drafts as we'll query them
         // differently in the front-end
-        return `http://localhost:3000/preview/pagetype1/${id}?id=${id}${isDraft(document._id) ? '&isDraft=true' : '&isDraft=false'}`
+        return `http://localhost:3000/preview/pagetype1/${id}?${isDraft(document._id) ? 'isDraft=true' : 'isDraft=false'}`
     }
     if (document._type === 'pagetype2') {
         // Then we get its ID
@@ -25,7 +25,7 @@ export default function resolveProductionUrl(document) {
         // And return a template string reflecting the URL structure we want. In this case, we're doing a
         // simple conditional to return '&isDraft=true' as a param for drafts as we'll query them
         // differently in the front-end
-        return `http://localhost:3000/preview/pagetype2/${id}?id=${id}${isDraft(document._id) ? '&isDraft=true' : '&isDraft=false'}`
+        return `http://localhost:3000/preview/pagetype2/${id}?${isDraft(document._id) ? 'isDraft=true' : 'isDraft=false'}`
     }
 }
 
