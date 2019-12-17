@@ -5,8 +5,8 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Import page document types
-import { pageType1 } from './pages/pageType1'
-import { pageType2 } from './pages/pageType2'
+import { article } from './pages/Article'
+import { page } from './pages/Page'
 
 // Import component document types
 // import { richTextBlock } from './blocks/richTextBlock';
@@ -19,8 +19,8 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     /* Your Page Document Types here! */
-    pageType1,
-    pageType2,
+    article,
+    page,
     /* Your Block Document Types here! */
   ])
 })

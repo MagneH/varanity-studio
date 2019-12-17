@@ -1,9 +1,9 @@
-const pageType2 = {
+const article = {
     // This is the display name for the type
-    title: "PageType2",
+    title: "Articles",
 
     // The identifier for this document type used in the api's
-    name: "pagetype2",
+    name: "article",
 
     // Documents have the type 'document'. Your schema may describe types beyond documents
     // but let's get back to that later.
@@ -32,8 +32,8 @@ const pageType2 = {
                     .replace(/\s+/g, '-')
                     .slice(0, 200)
             }
-        }
+        },
     ]
 };
 
-export { pageType2 }
+export { article }

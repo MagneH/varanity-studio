@@ -1,9 +1,9 @@
-const pageType1 = {
+const page = {
     // This is the display name for the type
-    title: "PageType1",
+    title: "Pages",
 
     // The identifier for this document type used in the api's
-    name: "pagetype1",
+    name: "page",
 
     // Documents have the type 'document'. Your schema may describe types beyond documents
     // but let's get back to that later.
@@ -36,4 +36,4 @@ const pageType1 = {
     ]
 };
 
-export { pageType1 }
+export { page }

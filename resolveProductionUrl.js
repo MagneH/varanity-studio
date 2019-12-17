@@ -1,7 +1,9 @@
+const standardLanguage = 'nb';
+
 export default function resolveProductionUrl(document) {
     // First, we select a specific type of document
     console.log(document);
-    if (document._type === 'pagetype1') {
+    if (document._type === 'article') {
         // Then we get its ID
         let id = document._id;
         // if it's a draft, we split its _id with the "drafts." substring, which will return an array,
@@ -12,9 +14,9 @@ export default function resolveProductionUrl(document) {
         // And return a template string reflecting the URL structure we want. In this case, we're doing a
         // simple conditional to return '&isDraft=true' as a param for drafts as we'll query them
         // differently in the front-end
-        return `http://localhost:3000/preview/pagetype1/${id}?${isDraft(document._id) ? 'isDraft=true' : 'isDraft=false'}`
+        return `http://localhost:3000/${standardLanguage}/preview/articles/${id}?${isDraft(document._id) ? 'isDraft=true' : 'isDraft=false'}`
     }
-    if (document._type === 'pagetype2') {
+    if (document._type === 'page') {
         // Then we get its ID
         let id = document._id;
         // if it's a draft, we split its _id with the "drafts." substring, which will return an array,
@@ -25,7 +27,7 @@ export default function resolveProductionUrl(document) {
         // And return a template string reflecting the URL structure we want. In this case, we're doing a
         // simple conditional to return '&isDraft=true' as a param for drafts as we'll query them
         // differently in the front-end
-        return `http://localhost:3000/preview/pagetype2/${id}?${isDraft(document._id) ? 'isDraft=true' : 'isDraft=false'}`
+        return `http://localhost:3000/${standardLanguage}/preview/pages/${id}?${isDraft(document._id) ? 'isDraft=true' : 'isDraft=false'}`
     }
 }
 
