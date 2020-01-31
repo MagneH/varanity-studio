@@ -7,6 +7,9 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 // Import page document types
 import { article } from './pages/Article'
 import { page } from './pages/Page'
+import { templates } from './templates/Templates'
+import { pageTemplate } from './templates/Page'
+import { articleTemplate } from './templates/Article';
 
 // Import component document types
 // import { richTextBlock } from './blocks/richTextBlock';
@@ -21,6 +24,9 @@ export default createSchema({
     /* Your Page Document Types here! */
     article,
     page,
+    templates,
     /* Your Block Document Types here! */
+    pageTemplate,
+    articleTemplate,
   ])
 })
