@@ -22,7 +22,11 @@ const templates = {
             title: 'Template Set',
             name: 'templateSet',
             type: 'array',
-            of: [{type: 'pageTemplate'}, {type: 'articleTemplate'}],
+            of: [
+                {type: 'pageTemplate'},
+                {type: 'articleTemplate'},
+                {type: 'frontPageTemplate'},
+            ],
         }
     ]
 };

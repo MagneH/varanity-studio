@@ -1,9 +1,9 @@
-const article = {
+const page = {
     // This is the display name for the type
-    title: "Articles",
+    title: "Pages",
 
     // The identifier for this document type used in the api's
-    name: "article",
+    name: "page",
 
     // Documents have the type 'document'. Your schema may describe types beyond documents
     // but let's get back to that later.
@@ -33,7 +33,40 @@ const article = {
                     .slice(0, 200)
             }
         },
+        {
+            name: 'authors',
+            title: 'Authors',
+            type: 'array',
+            of: [
+                {
+                    type: 'authorReference'
+                }
+            ]
+        },
+        {
+            name: 'categories',
+            type: 'array',
+            title: 'Categories',
+            of: [
+                {
+                    type: 'reference',
+                    to: {
+                        type: 'category'
+                    }
+                }
+            ]
+        },
+        {
+            name: 'mainImage',
+            type: 'mainImage',
+            title: 'Main image'
+        },
+        {
+            name: 'body',
+            type: 'bodyPortableText',
+            title: 'Body'
+        }
     ]
 };
 
-export { article }
+export { page }

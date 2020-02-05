@@ -5,11 +5,22 @@ import createSchema from 'part:@sanity/base/schema-creator'
 import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Import page document types
-import { article } from './pages/Article'
-import { page } from './pages/Page'
+import { article } from './documents/Article'
+import { page } from './documents/Page'
 import { templates } from './templates/Templates'
 import { pageTemplate } from './templates/Page'
 import { articleTemplate } from './templates/Article';
+import { frontPageTemplate } from './templates/FrontPage';
+import { authorReference } from './objects/authorReference';
+import { bioPortableText } from './objects/bioPortableText';
+import { bodyPortableText } from './objects/bodyPortableText';
+import { excerptPortableText } from './objects/excerptPortableText';
+import { mainImage } from './objects/mainImage';
+import { author } from './documents/Author';
+import { category } from './documents/Category';
+import { localeString } from './dataTypes/localeString';
+import { localeText } from './dataTypes/localeText';
+import { localeBlocks } from './dataTypes/localeBlocks';
 
 // Import component document types
 // import { richTextBlock } from './blocks/richTextBlock';
@@ -25,8 +36,19 @@ export default createSchema({
     article,
     page,
     templates,
+    author,
+    category,
     /* Your Block Document Types here! */
     pageTemplate,
     articleTemplate,
+    frontPageTemplate,
+    authorReference,
+    bioPortableText,
+    bodyPortableText,
+    excerptPortableText,
+    mainImage,
+    localeString,
+    localeText,
+    localeBlocks,
   ])
 })

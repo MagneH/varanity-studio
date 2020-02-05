@@ -1,13 +1,13 @@
-const page = {
+const frontPageTemplate = {
     // This is the display name for the type
-    title: "Pages",
+    title: "frontPageTemplate",
 
     // The identifier for this document type used in the api's
-    name: "page",
+    name: "frontPageTemplate",
 
     // Documents have the type 'document'. Your schema may describe types beyond documents
     // but let's get back to that later.
-    type: "document",
+    type: "object",
 
     // Now we proceed to list the fields of our document
     fields: [
@@ -20,20 +20,7 @@ const page = {
             // The type of this field
             type: "string",
         },
-        {
-            title: 'Slug',
-            name: 'slug',
-            type: 'slug',
-            options: {
-                source: 'title',
-                maxLength: 200, // will be ignored if slugify is set
-                slugify: input => input
-                    .toLowerCase()
-                    .replace(/\s+/g, '-')
-                    .slice(0, 200)
-            }
-        }
     ]
 };
 
-export { page }
+export { frontPageTemplate }
