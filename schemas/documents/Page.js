@@ -34,6 +34,15 @@ const page = {
             }
         },
         {
+            title: "Featured?",
+
+            // The identifier for this field used in the api's
+            name: "isFeatured",
+
+            // The type of this field
+            type: "boolean",
+        },
+        {
             name: 'authors',
             title: 'Authors',
             type: 'array',
@@ -60,6 +69,10 @@ const page = {
             name: 'mainImage',
             type: 'mainImage',
             title: 'Main image'
+        },
+        {
+            name: 'ingress',
+            type: 'localeBlocks',
         },
         {
             name: 'body',

@@ -1,5 +1,7 @@
 const standardLanguage = 'nb';
 
+const frontendHostName = process.env.SANITY_STUDIO_FRONTEND_HOST_NAME;
+
 export default function resolveProductionUrl(document) {
     // First, we select a specific type of document
     console.log(document);
@@ -14,7 +16,7 @@ export default function resolveProductionUrl(document) {
         // And return a template string reflecting the URL structure we want. In this case, we're doing a
         // simple conditional to return '&isDraft=true' as a param for drafts as we'll query them
         // differently in the front-end
-        return `http://localhost:3000/${standardLanguage}/preview/articles/${id}?${isDraft(document._id) ? 'isDraft=true' : 'isDraft=false'}`
+        return `${frontendHostName}/${standardLanguage}/preview/articles/${id}?${isDraft(document._id) ? 'isDraft=true' : 'isDraft=false'}`
     }
     if (document._type === 'page') {
         // Then we get its ID
@@ -27,7 +29,7 @@ export default function resolveProductionUrl(document) {
         // And return a template string reflecting the URL structure we want. In this case, we're doing a
         // simple conditional to return '&isDraft=true' as a param for drafts as we'll query them
         // differently in the front-end
-        return `http://localhost:3000/${standardLanguage}/preview/pages/${id}?${isDraft(document._id) ? 'isDraft=true' : 'isDraft=false'}`
+        return `${frontendHostName}/${standardLanguage}/preview/pages/${id}?${isDraft(document._id) ? 'isDraft=true' : 'isDraft=false'}`
     }
 }
 

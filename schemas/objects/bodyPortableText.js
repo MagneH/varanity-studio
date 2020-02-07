@@ -46,7 +46,7 @@ export const bodyPortableText = {
     // primitive types such as 'string' and 'number' in the same array
     // as a block type.
     {
-      type: 'mainImage',
+      type: 'image',
       options: {hotspot: true}
     }
   ]
