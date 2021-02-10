@@ -6,12 +6,17 @@ export const category = {
     {
       name: 'title',
       type: 'string',
-      title: 'Title'
+      title: 'Title',
     },
     {
       name: 'description',
       type: 'text',
-      title: 'Description'
+      title: 'Description',
+    },
+    {
+      name: 'mainImage',
+      type: 'mainImage',
+      title: 'Image',
     },
     {
       title: 'Slug',
