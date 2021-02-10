@@ -53,6 +53,12 @@ const article = {
             ]
         },
         {
+            name: 'mainCategory',
+            title: 'Main Category',
+            type: 'reference',
+            to: [{ type: 'category' }],
+        },
+        {
             name: 'categories',
             type: 'array',
             title: 'Categories',
