@@ -18,7 +18,7 @@ const page = {
             name: "title",
 
             // The type of this field
-            type: "string",
+            type: "localeString",
         },
         {
             title: 'Slug',
@@ -76,10 +76,22 @@ const page = {
         },
         {
             name: 'body',
-            type: 'bodyPortableText',
+            type: 'localeBlocks',
             title: 'Body'
         }
-    ]
+    ],
+    preview: {
+        select: {
+            name: 'title.en',
+        },
+        prepare(selection) {
+            const { name } = selection;
+
+            return {
+                title: name,
+            };
+        },
+    },
 };
 
 export { page }

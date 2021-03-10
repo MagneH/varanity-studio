@@ -1,4 +1,4 @@
-const standardLanguage = 'nb';
+const standardLanguage = 'en';
 
 const frontendHostName = process.env.SANITY_STUDIO_FRONTEND_HOST_NAME;
 

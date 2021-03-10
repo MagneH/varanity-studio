@@ -15,6 +15,7 @@ import { authorReference } from './objects/authorReference';
 import { bioPortableText } from './objects/bioPortableText';
 import { bodyPortableText } from './objects/bodyPortableText';
 import { excerptPortableText } from './objects/excerptPortableText';
+import { accordeon } from './objects/accordeon';
 import { mainImage } from './objects/mainImage';
 import { author } from './documents/Author';
 import { category } from './documents/Category';
@@ -50,5 +51,6 @@ export default createSchema({
     localeString,
     localeText,
     localeBlocks,
+    accordeon,
   ])
 })
