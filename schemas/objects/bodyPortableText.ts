@@ -48,6 +48,9 @@ export const bodyPortableText = {
     {
       type: 'image',
       options: {hotspot: true}
+    },
+    {
+      type: 'accordeon'
     }
   ]
 }

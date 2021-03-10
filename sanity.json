@@ -18,8 +18,16 @@
   ],
   "parts": [
     {
+      "name": "part:@sanity/base/initial-value-templates",
+      "path": "./templates/index.ts"
+    },
+    {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema.ts"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./structure/index.ts"
     },
     {
       "implements": "part:@sanity/production-preview/resolve-production-url",

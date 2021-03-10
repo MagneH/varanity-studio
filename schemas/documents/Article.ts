@@ -18,14 +18,14 @@ const article = {
             name: "title",
 
             // The type of this field
-            type: "string",
+            type: "localeString",
         },
         {
             title: 'Slug',
             name: 'slug',
             type: 'slug',
             options: {
-                source: 'title',
+                source: 'title.en',
                 maxLength: 200, // will be ignored if slugify is set
                 slugify: input => input
                     .toLowerCase()
@@ -57,6 +57,9 @@ const article = {
             title: 'Main Category',
             type: 'reference',
             to: [{ type: 'category' }],
+            options: {
+                filter: 'slug.current != "categories"',
+            }
         },
         {
             name: 'categories',
@@ -67,6 +70,9 @@ const article = {
                     type: 'reference',
                     to: {
                         type: 'category'
+                    },
+                    options: {
+                        filter: 'slug.current != "categories"',
                     }
                 }
             ]
@@ -82,7 +88,7 @@ const article = {
         },
         {
             name: 'body',
-            type: 'bodyPortableText',
+            type: 'localeBlocks',
             title: 'Body'
         }
     ]

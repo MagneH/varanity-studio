@@ -5,7 +5,7 @@ export const category = {
   fields: [
     {
       name: 'title',
-      type: 'string',
+      type: 'localeString',
       title: 'Title',
     },
     {
@@ -16,7 +16,7 @@ export const category = {
     {
       name: 'mainImage',
       type: 'mainImage',
-      title: 'Image',
+      title: 'Main Image',
     },
     {
       title: 'Slug',
@@ -41,11 +41,11 @@ export const category = {
   ],
   preview: {
     select: {
-      name: 'title',
-      parent: 'parent.title',
-      parent2: 'parent.parent.title',
-      parent3: 'parent.parent.parent.title',
-      parent4: 'parent.parent.parent.title',
+      name: 'title.en',
+      parent: 'parent.title.en',
+      parent2: 'parent.parent.title.en',
+      parent3: 'parent.parent.parent.title.en',
+      parent4: 'parent.parent.parent.title.en',
     },
     prepare(selection) {
       const { name, parent, parent2, parent3, parent4 } = selection;
